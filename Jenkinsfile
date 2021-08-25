@@ -1,9 +1,7 @@
 pipeline {
-  agent {
-    node {
-      label 'node'
-    }
-
+  agent any
+  tools {
+    nodejs 'nodejs' 
   }
   stages {
     stage('fetch from github') {
