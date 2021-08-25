@@ -14,6 +14,12 @@ pipeline {
     }
 
     stage('install dependencies') {
+      agent {
+        node {
+          label 'nodejs'
+        }
+
+      }
       steps {
         sh 'curl -fsSL https://deb.nodesource.com/setup_current.x | sudo -E bash -'
         sh 'sudo apt-get update'
