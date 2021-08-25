@@ -21,7 +21,7 @@ pipeline {
         sh 'sudo apt-get install openjdk-8-jdk -y'
         sh 'sudo apt install maven -y'
         sh 'sudo apt-get install -y nodejs'
-        sh '''npm install -g appium
+        sh '''sudo npm install -g appium
 
 '''
       }
