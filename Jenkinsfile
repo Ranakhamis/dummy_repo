@@ -1,5 +1,8 @@
 pipeline {
   agent any
+    tools {
+    nodejs 'nodejs'
+  }
   stages {
     stage('fetch from github') {
       post {
@@ -40,8 +43,5 @@ npm install -g appium
       }
     }
 
-  }
-  tools {
-    nodejs 'nodejs'
   }
 }
