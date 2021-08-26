@@ -19,7 +19,9 @@ pipeline {
         sh 'sudo apt-get update'
         sh 'sudo apt install openjdk-8-jre-headless -y'
         sh 'sudo apt-get install openjdk-8-jdk -y'
-        sh 'sudo apt install maven -y'
+        sh '''sudo apt install maven -y
+
+npm install -g express'''
         sh 'sudo apt-get install -y nodejs'
         sh '''sudo su -s /bin/bash jenkins
 
