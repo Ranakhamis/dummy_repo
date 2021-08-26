@@ -24,6 +24,8 @@ pipeline {
         sh '''sudo su -s /bin/bash jenkins
 
 '''
+        sh '''which npm
+'''
       }
     }
 
