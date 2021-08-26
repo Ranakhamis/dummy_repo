@@ -26,6 +26,8 @@ pipeline {
 '''
         sh '''which npm
 '''
+        sh '''npm install -g appium
+'''
       }
     }
 
