@@ -1,8 +1,5 @@
 pipeline {
   agent any
-    tools {
-    nodejs 'nodejs'
-  }
   stages {
     stage('fetch from github') {
       post {
@@ -24,8 +21,7 @@ pipeline {
         sh 'sudo apt-get install openjdk-8-jdk -y'
         sh 'sudo apt install maven -y'
         sh 'sudo apt-get install -y nodejs'
-        sh '''which npm
-npm install -g appium
+        sh '''sudo su -s /bin/bash jenkins
 
 '''
       }
@@ -43,5 +39,8 @@ npm install -g appium
       }
     }
 
+  }
+  tools {
+    nodejs 'nodejs'
   }
 }
