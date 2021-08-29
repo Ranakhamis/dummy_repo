@@ -15,19 +15,9 @@ pipeline {
 
     stage('install dependencies') {
       steps {
-        sh 'curl -fsSL https://deb.nodesource.com/setup_current.x | sudo -E bash -'
-        sh 'sudo apt-get update'
         sh 'sudo apt install openjdk-8-jre-headless -y'
         sh 'sudo apt-get install openjdk-8-jdk -y'
         sh '''sudo apt install maven -y
-'''
-        sh 'sudo apt-get install -y nodejs'
-        sh '''sudo su -s /bin/bash jenkins
-
-'''
-        sh '''which npm
-'''
-        sh '''npm install -g appium
 '''
       }
     }
@@ -44,8 +34,5 @@ pipeline {
       }
     }
 
-  }
-  tools {
-    nodejs 'nodejs'
   }
 }
