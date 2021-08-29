@@ -24,7 +24,7 @@ pipeline {
 
     stage('build project dependecies') {
       steps {
-        sh 'cd dummy_repo && mvn clean compile'
+        sh 'cd dummy_repo && chmod +x chromedriver && mvn clean compile'
       }
     }
 
