@@ -9,7 +9,7 @@ pipeline {
 
       }
       steps {
-        sh 'if cd dummy_repo; then git pull; else git clone https://github.com/alikoptan/dummy_repo; fi'
+        sh 'if cd dummy_repo; then git pull; else git clone https://github.com/Ranakhamis/dummy_repo.git; fi'
       }
     }
 
