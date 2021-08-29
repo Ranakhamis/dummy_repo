@@ -25,7 +25,7 @@ public class GreetingsStepdefs {
         String chromeDriverPath = "chromedriver";
         System.setProperty("webdriver.chrome.driver", chromeDriverPath);
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless");
+        options.addArguments("--headless --disable-feature=VizDisplayCompositor");
         WebDriver driver = new ChromeDriver(options);
         driver.get(url);
         WebElement element = driver.findElement(By.tagName("html"));
